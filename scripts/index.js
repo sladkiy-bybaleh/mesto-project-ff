@@ -10,7 +10,7 @@ const cardPlace = document.querySelector('.places__list');
 
 // @todo: Функция создания карточки
 
-function createCard(item) {
+function createCard(item, deleteCard) {
   const cardTitle = item.name;
   const cardLink = item.link;
   const cardTemplateClone = cardTemplateContent.cloneNode(true);
@@ -34,5 +34,5 @@ function deleteCard(cardElement) {
 // @todo: Вывести карточки на страницу
 
 initialCards.forEach((card) => {
-  cardPlace.append(createCard(card));
+  cardPlace.append(createCard(card, deleteCard));
 })
